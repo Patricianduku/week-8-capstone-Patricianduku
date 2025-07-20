@@ -24,7 +24,7 @@ const Footer = () => {
         setNewsletterStatus(data.message || "Signup failed. Please try again.");
       } else {
         setNewsletterStatus("Thank you for signing up!");
-        setNewsletterEmail("");
+        setNewsletterEmail(""); // Only clear on success
       }
     } catch (err) {
       setNewsletterStatus("Signup failed. Please try again.");

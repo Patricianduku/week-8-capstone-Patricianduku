@@ -20,15 +20,18 @@ const server = http.createServer(app);
 app.use(cors());
 app.use(express.json());
 
-app.use('/', (req, res) => {
-  res.send('Tuliza API is running.');
-});
-
+// --- Place API routes FIRST ---
 app.use('/api/auth', authRoutes);
 app.use('/api/journal', journalRoutes);
 app.use('/api/resources', resourcesRoutes);
 app.use('/api/chat', chatRoutes);
 app.use('/api/newsletter', newsletterRoutes);
+
+// --- Then a root route for health check ---
+app.get('/', (req, res) => {
+  res.send('Tuliza API is running.');
+});
+
 app.use(errorHandler);
 
 mongoose.connect(process.env.MONGO_URI);
