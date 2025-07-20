@@ -3,7 +3,7 @@ import Message from '../models/Message.js';
 
 const roomUserCounts = {};
 
-export default function setupSocket(server) {
+function setupSocket(server) {
   const io = new Server(server, {
     cors: {
       origin: '*',
@@ -46,4 +46,6 @@ export default function setupSocket(server) {
     const cutoff = new Date(Date.now() - 24 * 60 * 60 * 1000);
     await Message.deleteMany({ timestamp: { $lt: cutoff } });
   }, 60 * 60 * 1000);
-} 
+}
+
+export default setupSocket; 

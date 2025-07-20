@@ -1,8 +1,9 @@
-const express = require('express');
-const router = express.Router();
+import express from 'express';
 
 // In-memory storage for demo; replace with DB in production
 const subscribers = [];
+
+const router = express.Router();
 
 router.post('/', (req, res) => {
   const { email } = req.body;
@@ -16,4 +17,4 @@ router.post('/', (req, res) => {
   res.status(200).json({ message: 'Subscribed successfully!' });
 });
 
-module.exports = router; 
+export default router; 
