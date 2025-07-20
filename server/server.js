@@ -20,6 +20,10 @@ const server = http.createServer(app);
 app.use(cors());
 app.use(express.json());
 
+app.use('/', (req, res) => {
+  res.send('Tuliza API is running.');
+});
+
 app.use('/api/auth', authRoutes);
 app.use('/api/journal', journalRoutes);
 app.use('/api/resources', resourcesRoutes);
