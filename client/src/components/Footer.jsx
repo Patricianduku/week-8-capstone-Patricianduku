@@ -14,7 +14,7 @@ const Footer = () => {
       return;
     }
     try {
-      const res = await fetch("/api/newsletter", {
+      const res = await fetch("https://week-8-capstone-patricianduku-1.onrender.com/api/newsletter", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email: newsletterEmail }),
