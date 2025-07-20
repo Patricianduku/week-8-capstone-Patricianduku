@@ -48,8 +48,11 @@ Tuliza is a privacy-first mental wellness companion built for Kenyan youth, stud
      cd ../client
      npm run dev
      ```
-5. **Visit** `http://localhost:5173` in your browser.
+5. **Visit** 
+## Backend URL: https://week-8-capstone-patricianduku-1.onrender.com
+## Frontend URL: 
 ## video URL:https://www.loom.com/share/625abdfd06e541b3854d8845910aa709?sid=8903eab0-8f3e-42c8-9efe-e838f1c2bbcf
+
 ## Contributing
 - Fork the repo and create a feature branch.
 - Make your changes and submit a pull request.
