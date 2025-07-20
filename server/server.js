@@ -8,6 +8,7 @@ import authRoutes from './routes/auth.js';
 import journalRoutes from './routes/journalRoutes.js';
 import resourcesRoutes from './routes/resourcesRoutes.js';
 import chatRoutes from './routes/chatRoutes.js';
+import newsletterRoutes from './routes/newsletter.js';
 import errorHandler from './middleware/errorHandler.js';
 import setupSocket from './socket/index.js';
 
@@ -23,6 +24,7 @@ app.use('/api/auth', authRoutes);
 app.use('/api/journal', journalRoutes);
 app.use('/api/resources', resourcesRoutes);
 app.use('/api/chat', chatRoutes);
+app.use('/api/newsletter', newsletterRoutes);
 app.use(errorHandler);
 
 mongoose.connect(process.env.MONGO_URI, {
