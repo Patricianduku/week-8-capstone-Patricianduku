@@ -53,6 +53,30 @@ Tuliza is a privacy-first mental wellness companion built for Kenyan youth, stud
 ## Frontend URL: tuliza.netlify.app 
 ## video URL:https://www.loom.com/share/625abdfd06e541b3854d8845910aa709?sid=8903eab0-8f3e-42c8-9efe-e838f1c2bbcf
 
+##  Tests Summary
+
+###  Unit & Integration Tests (Jest)
+
+- Journaling reducer works correctly
+-  Auth context provides and updates user state
+-  Room filter logic behaves as expected
+
+###  End-to-End Tests (Cypress)
+
+#### Settings Page
+-  Loads the Settings page with core sections
+-  Has a visible email input
+-  Opens the Change Password modal and closes it
+- Conditionally displays Admin Panel
+
+
+---
+
+## 🛠️ CI Workflows (GitHub Actions)
+
+- **client.yaml**: Runs lint, unit/integration tests, Cypress e2e tests
+- **server.yaml**: Runs lint and backend unit tests
+
 ## Contributing
 - Fork the repo and create a feature branch.
 - Make your changes and submit a pull request.

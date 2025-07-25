@@ -1,0 +1,9 @@
+# .gitignore
+
+# Ignore node_modules everywhere
+node_modules/
+
+# Ignore root-level package files if not needed
+/package.json
+/package-lock.json
+/pnpm-lock.yaml
